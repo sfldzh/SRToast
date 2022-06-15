@@ -37,6 +37,11 @@ class SRHub: UIView {
     
     private func configer() -> Void {
         self.indicatorView.hidesWhenStopped = true
+        if #available(iOS 13.0, *) {
+            self.indicatorView.style = .large
+        }else{
+            self.indicatorView.style = .whiteLarge
+        }
         self.backgroundColor = UIColor.init(white: 0.2, alpha: 0.1)
     }
     

@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D60B98752859B6D50046B06A /* SRStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98742859B6D50046B06A /* SRStyleData.swift */; };
+		D60B98772859B7E30046B06A /* SRTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98762859B7E30046B06A /* SRTip.swift */; };
+		D60B98792859B8340046B06A /* SRTipStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98782859B8340046B06A /* SRTipStyleData.swift */; };
+		D60B987B2859B98E0046B06A /* SRToastTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B987A2859B98E0046B06A /* SRToastTool.swift */; };
+		D60B987D2859BEE90046B06A /* SRTip.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B987C2859BEE90046B06A /* SRTip.xib */; };
+		D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8832859801300A98D9D /* AppDelegate.swift */; };
+		D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8852859801300A98D9D /* SceneDelegate.swift */; };
+		D69AE8882859801300A98D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8872859801300A98D9D /* ViewController.swift */; };
+		D69AE88B2859801300A98D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AE8892859801300A98D9D /* Main.storyboard */; };
+		D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69AE88C2859801500A98D9D /* Assets.xcassets */; };
+		D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AE88E2859801500A98D9D /* LaunchScreen.storyboard */; };
+		D69AE8982859805700A98D9D /* SRHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8972859805700A98D9D /* SRHub.swift */; };
+		D69AE89A2859808400A98D9D /* SRToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8992859808400A98D9D /* SRToast.swift */; };
+		D69AE89C285981EB00A98D9D /* SRHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69AE89B285981EB00A98D9D /* SRHub.xib */; };
+		D69BCB93285989790016FBE7 /* SRHubStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69BCB92285989790016FBE7 /* SRHubStyleData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D60B98742859B6D50046B06A /* SRStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRStyleData.swift; sourceTree = "<group>"; };
+		D60B98762859B7E30046B06A /* SRTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTip.swift; sourceTree = "<group>"; };
+		D60B98782859B8340046B06A /* SRTipStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTipStyleData.swift; sourceTree = "<group>"; };
+		D60B987A2859B98E0046B06A /* SRToastTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRToastTool.swift; sourceTree = "<group>"; };
+		D60B987C2859BEE90046B06A /* SRTip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SRTip.xib; sourceTree = "<group>"; };
+		D69AE8802859801300A98D9D /* SRToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69AE8832859801300A98D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D69AE8852859801300A98D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D69AE8872859801300A98D9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D69AE88A2859801300A98D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D69AE88C2859801500A98D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D69AE88F2859801500A98D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D69AE8912859801500A98D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D69AE8972859805700A98D9D /* SRHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHub.swift; sourceTree = "<group>"; };
+		D69AE8992859808400A98D9D /* SRToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRToast.swift; sourceTree = "<group>"; };
+		D69AE89B285981EB00A98D9D /* SRHub.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SRHub.xib; sourceTree = "<group>"; };
+		D69BCB92285989790016FBE7 /* SRHubStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHubStyleData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D69AE87D2859801300A98D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D60B98732859B65D0046B06A /* SRTip */ = {
+			isa = PBXGroup;
+			children = (
+				D60B98762859B7E30046B06A /* SRTip.swift */,
+				D60B987C2859BEE90046B06A /* SRTip.xib */,
+				D60B98782859B8340046B06A /* SRTipStyleData.swift */,
+			);
+			path = SRTip;
+			sourceTree = "<group>";
+		};
+		D69AE8772859801300A98D9D = {
+			isa = PBXGroup;
+			children = (
+				D69AE8822859801300A98D9D /* SRToast */,
+				D69AE8812859801300A98D9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D69AE8812859801300A98D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D69AE8802859801300A98D9D /* SRToast.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D69AE8822859801300A98D9D /* SRToast */ = {
+			isa = PBXGroup;
+			children = (
+				D69AE8992859808400A98D9D /* SRToast.swift */,
+				D60B98742859B6D50046B06A /* SRStyleData.swift */,
+				D60B987A2859B98E0046B06A /* SRToastTool.swift */,
+				D60B98732859B65D0046B06A /* SRTip */,
+				D69BCB942859898B0016FBE7 /* SRHub */,
+				D69AE8832859801300A98D9D /* AppDelegate.swift */,
+				D69AE8852859801300A98D9D /* SceneDelegate.swift */,
+				D69AE8872859801300A98D9D /* ViewController.swift */,
+				D69AE8892859801300A98D9D /* Main.storyboard */,
+				D69AE88C2859801500A98D9D /* Assets.xcassets */,
+				D69AE88E2859801500A98D9D /* LaunchScreen.storyboard */,
+				D69AE8912859801500A98D9D /* Info.plist */,
+			);
+			path = SRToast;
+			sourceTree = "<group>";
+		};
+		D69BCB942859898B0016FBE7 /* SRHub */ = {
+			isa = PBXGroup;
+			children = (
+				D69BCB92285989790016FBE7 /* SRHubStyleData.swift */,
+				D69AE8972859805700A98D9D /* SRHub.swift */,
+				D69AE89B285981EB00A98D9D /* SRHub.xib */,
+			);
+			path = SRHub;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D69AE87F2859801300A98D9D /* SRToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D69AE8942859801500A98D9D /* Build configuration list for PBXNativeTarget "SRToast" */;
+			buildPhases = (
+				D69AE87C2859801300A98D9D /* Sources */,
+				D69AE87D2859801300A98D9D /* Frameworks */,
+				D69AE87E2859801300A98D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRToast;
+			productName = SRToast;
+			productReference = D69AE8802859801300A98D9D /* SRToast.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D69AE8782859801300A98D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D69AE87F2859801300A98D9D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D69AE87B2859801300A98D9D /* Build configuration list for PBXProject "SRToast" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D69AE8772859801300A98D9D;
+			productRefGroup = D69AE8812859801300A98D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D69AE87F2859801300A98D9D /* SRToast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D69AE87E2859801300A98D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */,
+				D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */,
+				D69AE89C285981EB00A98D9D /* SRHub.xib in Resources */,
+				D69AE88B2859801300A98D9D /* Main.storyboard in Resources */,
+				D60B987D2859BEE90046B06A /* SRTip.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D69AE87C2859801300A98D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69AE8882859801300A98D9D /* ViewController.swift in Sources */,
+				D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */,
+				D60B987B2859B98E0046B06A /* SRToastTool.swift in Sources */,
+				D69BCB93285989790016FBE7 /* SRHubStyleData.swift in Sources */,
+				D69AE8982859805700A98D9D /* SRHub.swift in Sources */,
+				D60B98752859B6D50046B06A /* SRStyleData.swift in Sources */,
+				D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */,
+				D60B98792859B8340046B06A /* SRTipStyleData.swift in Sources */,
+				D60B98772859B7E30046B06A /* SRTip.swift in Sources */,
+				D69AE89A2859808400A98D9D /* SRToast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D69AE8892859801300A98D9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D69AE88A2859801300A98D9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D69AE88E2859801500A98D9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D69AE88F2859801500A98D9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D69AE8922859801500A98D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D69AE8932859801500A98D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D69AE8952859801500A98D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN6K6JLYC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SRToast/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sr.web.SRToast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D69AE8962859801500A98D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MN6K6JLYC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SRToast/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sr.web.SRToast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D69AE87B2859801300A98D9D /* Build configuration list for PBXProject "SRToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69AE8922859801500A98D9D /* Debug */,
+				D69AE8932859801500A98D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D69AE8942859801500A98D9D /* Build configuration list for PBXNativeTarget "SRToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69AE8952859801500A98D9D /* Debug */,
+				D69AE8962859801500A98D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D69AE8782859801300A98D9D /* Project object */;
+}

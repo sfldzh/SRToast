@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SRTip: UIView {
+public class SRTip: UIView {
     var showIng = false
     private var afterWorkItem:DispatchWorkItem?
     let showLabel:UILabel = {
@@ -28,7 +28,7 @@ class SRTip: UIView {
     open var completeHandle:((_ tap:Bool)->Void)?
     
     static func createView() -> SRTip?{
-        let datas = Bundle.main.loadNibNamed("SRTip", owner:nil, options:nil)!;
+        let datas = sr_toast_bundle.loadNibNamed("SRTip", owner:nil, options:nil)!;
         var view:SRTip?
         for data in datas {
             if let temp = data as? SRTip{
@@ -39,7 +39,7 @@ class SRTip: UIView {
         return view;
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
         if view == self {
           return nil

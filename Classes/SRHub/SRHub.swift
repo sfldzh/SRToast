@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SRHub: UIView {
+open class SRHub: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var effectView: UIVisualEffectView!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
@@ -19,7 +19,7 @@ class SRHub: UIView {
     open var filters:[CGRect] = []
     
     static func createView() -> SRHub?{
-        let datas = Bundle.main.loadNibNamed("SRHub", owner:nil, options:nil)!;
+        let datas = sr_toast_bundle.loadNibNamed("SRHub", owner:nil, options:nil)!;
         var view:SRHub?
         for data in datas {
             if let temp = data as? SRHub{
@@ -28,11 +28,6 @@ class SRHub: UIView {
             }
         }
         return view;
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
     }
     
     private func configer() -> Void {
@@ -45,14 +40,14 @@ class SRHub: UIView {
         self.backgroundColor = UIColor.init(white: 0.2, alpha: 0.1)
     }
     
-    override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         self.configer()
         self.configerStyle(styleData: self.style ?? SRToastManage.shared.hubStyleData)
         self.indicatorView.startAnimating()
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         if self.filters.contains(where: { rect in
             return rect.contains(point)
         }) {

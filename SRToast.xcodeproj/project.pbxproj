@@ -16,6 +16,7 @@
 		D60B98902859CA510046B06A /* SRTip.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B98872859CA510046B06A /* SRTip.xib */; };
 		D60B98912859CA510046B06A /* SRToastTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98882859CA510046B06A /* SRToastTool.swift */; };
 		D60B98922859CA510046B06A /* SRStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98892859CA510046B06A /* SRStyleData.swift */; };
+		D60B98B42859DB0B0046B06A /* SRToast.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D60B98B32859DB0B0046B06A /* SRToast.podspec */; };
 		D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8832859801300A98D9D /* AppDelegate.swift */; };
 		D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8852859801300A98D9D /* SceneDelegate.swift */; };
 		D69AE8882859801300A98D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8872859801300A98D9D /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		D60B98872859CA510046B06A /* SRTip.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRTip.xib; sourceTree = "<group>"; };
 		D60B98882859CA510046B06A /* SRToastTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRToastTool.swift; sourceTree = "<group>"; };
 		D60B98892859CA510046B06A /* SRStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRStyleData.swift; sourceTree = "<group>"; };
+		D60B98B32859DB0B0046B06A /* SRToast.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRToast.podspec; sourceTree = "<group>"; };
 		D69AE8802859801300A98D9D /* SRToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69AE8832859801300A98D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69AE8852859801300A98D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		D69AE8772859801300A98D9D = {
 			isa = PBXGroup;
 			children = (
+				D60B98B32859DB0B0046B06A /* SRToast.podspec */,
 				D60B987E2859CA510046B06A /* Classes */,
 				D69AE8822859801300A98D9D /* SRToast */,
 				D69AE8812859801300A98D9D /* Products */,
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */,
+				D60B98B42859DB0B0046B06A /* SRToast.podspec in Resources */,
 				D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */,
 				D60B988B2859CA510046B06A /* SRHub.xib in Resources */,
 				D69AE88B2859801300A98D9D /* Main.storyboard in Resources */,

@@ -8,6 +8,18 @@
 import Foundation
 import UIKit
 
+#if COCOAPODS
+let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
+  .path(forResource: "SRToast", ofType: "bundle")
+  .map {
+    Bundle.init(path: $0)
+}!
+#else
+let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)!
+#endif
+
+fileprivate final class SRDummy {}
+
 class SRToastManage {
     open var hubStyleData:SRHubStyleData = {
         let hubData = SRHubStyleData.init()
@@ -28,7 +40,7 @@ class SRToastManage {
     
 }
 
-extension UIView{
+public extension UIView{
     
     @discardableResult
     func showHub(value:String = "", style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {

@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D60B98752859B6D50046B06A /* SRStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98742859B6D50046B06A /* SRStyleData.swift */; };
-		D60B98772859B7E30046B06A /* SRTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98762859B7E30046B06A /* SRTip.swift */; };
-		D60B98792859B8340046B06A /* SRTipStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98782859B8340046B06A /* SRTipStyleData.swift */; };
-		D60B987B2859B98E0046B06A /* SRToastTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B987A2859B98E0046B06A /* SRToastTool.swift */; };
-		D60B987D2859BEE90046B06A /* SRTip.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B987C2859BEE90046B06A /* SRTip.xib */; };
+		D60B988A2859CA510046B06A /* SRHubStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98802859CA510046B06A /* SRHubStyleData.swift */; };
+		D60B988B2859CA510046B06A /* SRHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B98812859CA510046B06A /* SRHub.xib */; };
+		D60B988C2859CA510046B06A /* SRHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98822859CA510046B06A /* SRHub.swift */; };
+		D60B988D2859CA510046B06A /* SRToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98832859CA510046B06A /* SRToast.swift */; };
+		D60B988E2859CA510046B06A /* SRTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98852859CA510046B06A /* SRTip.swift */; };
+		D60B988F2859CA510046B06A /* SRTipStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98862859CA510046B06A /* SRTipStyleData.swift */; };
+		D60B98902859CA510046B06A /* SRTip.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B98872859CA510046B06A /* SRTip.xib */; };
+		D60B98912859CA510046B06A /* SRToastTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98882859CA510046B06A /* SRToastTool.swift */; };
+		D60B98922859CA510046B06A /* SRStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98892859CA510046B06A /* SRStyleData.swift */; };
 		D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8832859801300A98D9D /* AppDelegate.swift */; };
 		D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8852859801300A98D9D /* SceneDelegate.swift */; };
 		D69AE8882859801300A98D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8872859801300A98D9D /* ViewController.swift */; };
 		D69AE88B2859801300A98D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AE8892859801300A98D9D /* Main.storyboard */; };
 		D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69AE88C2859801500A98D9D /* Assets.xcassets */; };
 		D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69AE88E2859801500A98D9D /* LaunchScreen.storyboard */; };
-		D69AE8982859805700A98D9D /* SRHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8972859805700A98D9D /* SRHub.swift */; };
-		D69AE89A2859808400A98D9D /* SRToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8992859808400A98D9D /* SRToast.swift */; };
-		D69AE89C285981EB00A98D9D /* SRHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69AE89B285981EB00A98D9D /* SRHub.xib */; };
-		D69BCB93285989790016FBE7 /* SRHubStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69BCB92285989790016FBE7 /* SRHubStyleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D60B98742859B6D50046B06A /* SRStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRStyleData.swift; sourceTree = "<group>"; };
-		D60B98762859B7E30046B06A /* SRTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTip.swift; sourceTree = "<group>"; };
-		D60B98782859B8340046B06A /* SRTipStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTipStyleData.swift; sourceTree = "<group>"; };
-		D60B987A2859B98E0046B06A /* SRToastTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRToastTool.swift; sourceTree = "<group>"; };
-		D60B987C2859BEE90046B06A /* SRTip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SRTip.xib; sourceTree = "<group>"; };
+		D60B98802859CA510046B06A /* SRHubStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRHubStyleData.swift; sourceTree = "<group>"; };
+		D60B98812859CA510046B06A /* SRHub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRHub.xib; sourceTree = "<group>"; };
+		D60B98822859CA510046B06A /* SRHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRHub.swift; sourceTree = "<group>"; };
+		D60B98832859CA510046B06A /* SRToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRToast.swift; sourceTree = "<group>"; };
+		D60B98852859CA510046B06A /* SRTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTip.swift; sourceTree = "<group>"; };
+		D60B98862859CA510046B06A /* SRTipStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTipStyleData.swift; sourceTree = "<group>"; };
+		D60B98872859CA510046B06A /* SRTip.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRTip.xib; sourceTree = "<group>"; };
+		D60B98882859CA510046B06A /* SRToastTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRToastTool.swift; sourceTree = "<group>"; };
+		D60B98892859CA510046B06A /* SRStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRStyleData.swift; sourceTree = "<group>"; };
 		D69AE8802859801300A98D9D /* SRToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69AE8832859801300A98D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69AE8852859801300A98D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,10 +42,6 @@
 		D69AE88C2859801500A98D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69AE88F2859801500A98D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D69AE8912859801500A98D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D69AE8972859805700A98D9D /* SRHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHub.swift; sourceTree = "<group>"; };
-		D69AE8992859808400A98D9D /* SRToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRToast.swift; sourceTree = "<group>"; };
-		D69AE89B285981EB00A98D9D /* SRHub.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SRHub.xib; sourceTree = "<group>"; };
-		D69BCB92285989790016FBE7 /* SRHubStyleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHubStyleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +55,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D60B98732859B65D0046B06A /* SRTip */ = {
+		D60B987E2859CA510046B06A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D60B98762859B7E30046B06A /* SRTip.swift */,
-				D60B987C2859BEE90046B06A /* SRTip.xib */,
-				D60B98782859B8340046B06A /* SRTipStyleData.swift */,
+				D60B98892859CA510046B06A /* SRStyleData.swift */,
+				D60B98832859CA510046B06A /* SRToast.swift */,
+				D60B98882859CA510046B06A /* SRToastTool.swift */,
+				D60B987F2859CA510046B06A /* SRHub */,
+				D60B98842859CA510046B06A /* SRTip */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D60B987F2859CA510046B06A /* SRHub */ = {
+			isa = PBXGroup;
+			children = (
+				D60B98802859CA510046B06A /* SRHubStyleData.swift */,
+				D60B98822859CA510046B06A /* SRHub.swift */,
+				D60B98812859CA510046B06A /* SRHub.xib */,
+			);
+			path = SRHub;
+			sourceTree = "<group>";
+		};
+		D60B98842859CA510046B06A /* SRTip */ = {
+			isa = PBXGroup;
+			children = (
+				D60B98852859CA510046B06A /* SRTip.swift */,
+				D60B98872859CA510046B06A /* SRTip.xib */,
+				D60B98862859CA510046B06A /* SRTipStyleData.swift */,
 			);
 			path = SRTip;
 			sourceTree = "<group>";
@@ -68,6 +90,7 @@
 		D69AE8772859801300A98D9D = {
 			isa = PBXGroup;
 			children = (
+				D60B987E2859CA510046B06A /* Classes */,
 				D69AE8822859801300A98D9D /* SRToast */,
 				D69AE8812859801300A98D9D /* Products */,
 			);
@@ -84,11 +107,6 @@
 		D69AE8822859801300A98D9D /* SRToast */ = {
 			isa = PBXGroup;
 			children = (
-				D69AE8992859808400A98D9D /* SRToast.swift */,
-				D60B98742859B6D50046B06A /* SRStyleData.swift */,
-				D60B987A2859B98E0046B06A /* SRToastTool.swift */,
-				D60B98732859B65D0046B06A /* SRTip */,
-				D69BCB942859898B0016FBE7 /* SRHub */,
 				D69AE8832859801300A98D9D /* AppDelegate.swift */,
 				D69AE8852859801300A98D9D /* SceneDelegate.swift */,
 				D69AE8872859801300A98D9D /* ViewController.swift */,
@@ -98,16 +116,6 @@
 				D69AE8912859801500A98D9D /* Info.plist */,
 			);
 			path = SRToast;
-			sourceTree = "<group>";
-		};
-		D69BCB942859898B0016FBE7 /* SRHub */ = {
-			isa = PBXGroup;
-			children = (
-				D69BCB92285989790016FBE7 /* SRHubStyleData.swift */,
-				D69AE8972859805700A98D9D /* SRHub.swift */,
-				D69AE89B285981EB00A98D9D /* SRHub.xib */,
-			);
-			path = SRHub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +178,9 @@
 			files = (
 				D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */,
 				D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */,
-				D69AE89C285981EB00A98D9D /* SRHub.xib in Resources */,
+				D60B988B2859CA510046B06A /* SRHub.xib in Resources */,
 				D69AE88B2859801300A98D9D /* Main.storyboard in Resources */,
-				D60B987D2859BEE90046B06A /* SRTip.xib in Resources */,
+				D60B98902859CA510046B06A /* SRTip.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,16 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60B98922859CA510046B06A /* SRStyleData.swift in Sources */,
 				D69AE8882859801300A98D9D /* ViewController.swift in Sources */,
+				D60B988C2859CA510046B06A /* SRHub.swift in Sources */,
 				D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */,
-				D60B987B2859B98E0046B06A /* SRToastTool.swift in Sources */,
-				D69BCB93285989790016FBE7 /* SRHubStyleData.swift in Sources */,
-				D69AE8982859805700A98D9D /* SRHub.swift in Sources */,
-				D60B98752859B6D50046B06A /* SRStyleData.swift in Sources */,
+				D60B988A2859CA510046B06A /* SRHubStyleData.swift in Sources */,
+				D60B98912859CA510046B06A /* SRToastTool.swift in Sources */,
+				D60B988F2859CA510046B06A /* SRTipStyleData.swift in Sources */,
+				D60B988D2859CA510046B06A /* SRToast.swift in Sources */,
+				D60B988E2859CA510046B06A /* SRTip.swift in Sources */,
 				D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */,
-				D60B98792859B8340046B06A /* SRTipStyleData.swift in Sources */,
-				D60B98772859B7E30046B06A /* SRTip.swift in Sources */,
-				D69AE89A2859808400A98D9D /* SRToast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

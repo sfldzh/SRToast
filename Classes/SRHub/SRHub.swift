@@ -16,6 +16,7 @@ class SRHub: UIView {
     
     open var style:SRHubStyleData?
     open var value:String = ""
+    open var filters:[CGRect] = []
     
     static func createView() -> SRHub?{
         let datas = Bundle.main.loadNibNamed("SRHub", owner:nil, options:nil)!;
@@ -44,6 +45,16 @@ class SRHub: UIView {
         self.configer()
         self.configerStyle(styleData: self.style ?? SRToastManage.shared.hubStyleData)
         self.indicatorView.startAnimating()
+    }
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        if self.filters.contains(where: { rect in
+            return rect.contains(point)
+        }) {
+            return nil
+        }else{
+            return super.hitTest(point, with: event)
+        }
     }
     
     private func configerStyle(styleData:SRHubStyleData) -> Void {

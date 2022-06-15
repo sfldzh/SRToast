@@ -31,8 +31,9 @@ class SRToastManage {
 extension UIView{
     
     @discardableResult
-    func showHub(value:String = "", style:SRHubStyleData? = nil) -> SRHub {
+    func showHub(value:String = "", style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
         let hub = SRHub.createView()!
+        hub.filters = filters
         hub.style = style
         hub.frame = self.bounds
         self.addSubview(hub)

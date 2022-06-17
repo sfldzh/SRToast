@@ -15,12 +15,12 @@ let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
     Bundle.init(path: $0)
 }!
 #else
-let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)!
+let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
 #endif
 
 fileprivate final class SRDummy {}
 
-class SRToastManage {
+open class SRToastManage {
     open var hubStyleData:SRHubStyleData = {
         let hubData = SRHubStyleData.init()
         hubData.isTranslucent = true

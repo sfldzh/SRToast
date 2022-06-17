@@ -74,7 +74,11 @@ open class SRHub: UIView {
     }
     
     open func remove(){
-        self.removeFromSuperview()
+        UIView.animate(withDuration: 0.2) {
+            self.alpha = 0
+        } completion: { isFinish in
+            self.removeFromSuperview()
+        }
     }
 
 }

@@ -24,7 +24,12 @@ public class SRTip: UIView {
         return showLabel
     }()
     
-    open var tipStyle:SRTipStyleData!
+    private var tipStyle:SRTipStyleData!{
+        didSet{
+            self.showLabel.backgroundColor = tipStyle.backgroundColor
+            self.showLabel.textColor = tipStyle.tipColor
+        }
+    }
     open var completeHandle:((_ tap:Bool)->Void)?
     
     static func createView() -> SRTip?{

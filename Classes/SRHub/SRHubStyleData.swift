@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 public class SRHubStyleData:SRStyleData {
-    var indicatorColor:UIColor = UIColor.white
+    open var indicatorColor:UIColor = UIColor.white
 }

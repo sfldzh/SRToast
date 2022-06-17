@@ -12,6 +12,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        SRToastManage.shared.tipStyleData.backgroundColor = UIColor.red
+//        SRToastManage.shared.tipStyleData.tipColor = UIColor.green
+        SRToastManage.shared.hubStyleData.isTranslucent = true
+        SRToastManage.shared.hubStyleData.backgroundColor = UIColor.clear
+        SRToastManage.shared.hubStyleData.indicatorColor = UIColor.green
+        SRToastManage.shared.hubStyleData.tipColor = UIColor.green
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.testAction()
@@ -27,7 +33,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hub.setHubContent(value: "稍等一会，马上就完成，不会太久的，放心，你只要安静下来，保持心平静和，时机一会就过去了")
         }
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
             hub.remove()
         }

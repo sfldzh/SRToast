@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public class SRStyleData{
-    var isTranslucent:Bool = false
-    var backgroundColor:UIColor = UIColor.clear
-    var tipColor:UIColor = UIColor.white
+    open var isTranslucent:Bool = false
+    open var backgroundColor:UIColor = UIColor.clear
+    open var tipColor:UIColor = UIColor.white
 }

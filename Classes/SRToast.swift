@@ -32,7 +32,7 @@ open class SRToastManage {
         return hubData
     }()
     /// TODO:单利
-    static let shared: SRToastManage = {
+    public static let shared: SRToastManage = {
         let instance = SRToastManage()
         return instance
     }()

@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-public class SRStyleData{
-    open var isTranslucent:Bool = false
-    open var backgroundColor:UIColor = UIColor.clear
-    open var tipColor:UIColor = UIColor.white
+@objc public class SRStyleData: NSObject{
+    @objc open var isTranslucent:Bool = false
+    @objc open var backgroundColor:UIColor = UIColor.clear
+    @objc open var tipColor:UIColor = UIColor.white
 }

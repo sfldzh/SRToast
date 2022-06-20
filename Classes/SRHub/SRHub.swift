@@ -64,7 +64,7 @@ open class SRHub: UIView {
         self.tipLabel.textColor = styleData.tipColor
     }
     
-    open func setHubContent(value:String){
+    @objc open func setHubContent(value:String){
         self.tipLabel.isHidden = value.isEmpty ? true : false
         self.tipLabel.text = value
         DispatchQueue.main.async {
@@ -73,7 +73,7 @@ open class SRHub: UIView {
         }
     }
     
-    open func remove(){
+    @objc open func remove(){
         UIView.animate(withDuration: 0.2) {
             self.alpha = 0
         } completion: { isFinish in

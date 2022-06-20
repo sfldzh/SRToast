@@ -20,19 +20,19 @@ let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
 
 fileprivate final class SRDummy {}
 
-open class SRToastManage {
-    open var hubStyleData:SRHubStyleData = {
+@objc open class SRToastManage:NSObject {
+    @objc open var hubStyleData:SRHubStyleData = {
         let hubData = SRHubStyleData.init()
         hubData.isTranslucent = true
         return hubData
     }()
     
-    open var tipStyleData:SRTipStyleData = {
+    @objc open var tipStyleData:SRTipStyleData = {
         let hubData = SRTipStyleData.init()
         return hubData
     }()
     /// TODO:单利
-    public static let shared: SRToastManage = {
+    @objc public static let shared: SRToastManage = {
         let instance = SRToastManage()
         return instance
     }()
@@ -43,18 +43,23 @@ open class SRToastManage {
 public extension UIView{
     
     @discardableResult
-    func showHub(value:String = "", style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
+    @objc func showHub(value:String = "", style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
         let hub = SRHub.createView()!
         hub.filters = filters
         hub.style = style
         hub.frame = self.bounds
         self.addSubview(hub)
+//        hub.translatesAutoresizingMaskIntoConstraints = false
+//        hub.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true  //顶部约束
+//        hub.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true  //左端约束
+//        hub.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true  //右端约束
+//        hub.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true  //底部约束
         hub.setHubContent(value: value)
         return hub
     }
     
     @discardableResult
-    func showTip(value:String,style:SRTipStyleData? = nil,completeHandle:((_ tap:Bool)->Void)? = nil) -> SRTip {
+    @objc func showTip(value:String,style:SRTipStyleData? = nil,completeHandle:((_ tap:Bool)->Void)? = nil) -> SRTip {
         let tip = SRTip.createView()!
         tip.completeHandle = completeHandle
         tip.frame = self.bounds

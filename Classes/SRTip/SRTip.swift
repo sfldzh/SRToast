@@ -75,7 +75,7 @@ public class SRTip: UIView {
         self.showLabel.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(tapDismiss(tap:))))
     }
     
-    open func setTipContent(value:String) -> Void {
+    @objc open func setTipContent(value:String) -> Void {
         let appSize = UIScreen.main.bounds.size
         if self.showLabel.superview == nil {
             self.addSubview(self.showLabel);

@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-public class SRHubStyleData:SRStyleData {
-    open var indicatorColor:UIColor = UIColor.white
+@objc public class SRHubStyleData:SRStyleData {
+    @objc open var indicatorColor:UIColor = UIColor.white
 }

@@ -43,7 +43,7 @@ fileprivate final class SRDummy {}
 public extension UIView{
     
     @discardableResult
-    @objc func showHub(value:String?, style:SRHubStyleData? = nil, filters:[CGRect]?) -> SRHub {
+    @objc func showHub(value:String? = nil, style:SRHubStyleData? = nil, filters:[CGRect]? = nil) -> SRHub {
         let hub = SRHub.createView()!
         hub.style = style
         hub.filters = filters ?? []

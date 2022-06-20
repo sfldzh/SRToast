@@ -43,10 +43,10 @@ fileprivate final class SRDummy {}
 public extension UIView{
     
     @discardableResult
-    @objc func showHub(value:String = "", style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
+    @objc func showHub(value:String?, style:SRHubStyleData? = nil, filters:[CGRect]?) -> SRHub {
         let hub = SRHub.createView()!
-        hub.filters = filters
         hub.style = style
+        hub.filters = filters ?? []
         hub.frame = self.bounds
         self.addSubview(hub)
 //        hub.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +54,7 @@ public extension UIView{
 //        hub.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true  //左端约束
 //        hub.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true  //右端约束
 //        hub.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true  //底部约束
-        hub.setHubContent(value: value)
+        hub.setHubContent(value: value ?? "")
         return hub
     }
     

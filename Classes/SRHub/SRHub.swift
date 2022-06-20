@@ -14,7 +14,13 @@ open class SRHub: UIView {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var contentWidth: NSLayoutConstraint!
     
-    open var style:SRHubStyleData?
+    open var style:SRHubStyleData?{
+        didSet{
+            if style != nil{
+                self.configerStyle(styleData: style!)
+            }
+        }
+    }
     open var value:String = ""
     open var filters:[CGRect] = []
     

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 //        SRToastManage.shared.tipStyleData.backgroundColor = UIColor.red
 //        SRToastManage.shared.tipStyleData.tipColor = UIColor.green
         SRToastManage.shared.hubStyleData.isTranslucent = true
+        SRToastManage.shared.hubStyleData.isDark = false
         SRToastManage.shared.hubStyleData.backgroundColor = UIColor.clear
         SRToastManage.shared.hubStyleData.indicatorColor = UIColor.green
         SRToastManage.shared.hubStyleData.tipColor = UIColor.green

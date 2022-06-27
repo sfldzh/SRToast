@@ -43,7 +43,7 @@ open class SRHub: UIView {
         }else{
             self.indicatorView.style = .whiteLarge
         }
-        self.backgroundColor = UIColor.init(white: 0.2, alpha: 0.1)
+        self.backgroundColor = UIColor.clear
     }
     
     open override func awakeFromNib() {
@@ -64,10 +64,22 @@ open class SRHub: UIView {
     }
     
     private func configerStyle(styleData:SRHubStyleData) -> Void {
-        self.effectView.isHidden = !styleData.isTranslucent
-        self.contentView.backgroundColor = styleData.backgroundColor
-        self.indicatorView.color = styleData.indicatorColor
-        self.tipLabel.textColor = styleData.tipColor
+        if styleData.isTranslucent{
+            self.effectView.isHidden = false
+            self.effectView.effect = UIBlurEffect.init(style: styleData.isDark ? .dark : .extraLight)
+            if styleData.isDark{
+                self.indicatorView.color = UIColor.white
+                self.tipLabel.textColor = UIColor.white
+            }else{
+                self.indicatorView.color = UIColor.init(white: 0.0, alpha: 0.7)
+                self.tipLabel.textColor = UIColor.init(white: 0.0, alpha: 0.7)
+            }
+        }else{
+            self.effectView.isHidden = true
+            self.contentView.backgroundColor = styleData.backgroundColor
+            self.indicatorView.color = styleData.indicatorColor
+            self.tipLabel.textColor = styleData.tipColor
+        }
     }
     
     @objc open func setHubContent(value:String){

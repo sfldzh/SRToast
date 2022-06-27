@@ -10,4 +10,5 @@ import UIKit
 
 @objc public class SRHubStyleData:SRStyleData {
     @objc open var indicatorColor:UIColor = UIColor.white
+    @objc open var isDark:Bool = true
 }

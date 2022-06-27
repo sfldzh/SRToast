@@ -22,6 +22,20 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.testAction()
         }
+        var str = "我们在这里"
+        if let rang:Range = str.range(of: "在这"){
+            if !rang.isEmpty{
+//                let location = str.distance(from: str.startIndex, to: rang.lowerBound)
+                
+                str = String(str[rang.lowerBound..<rang.upperBound])
+                print(rang.lowerBound)
+            }
+        }
+        
+//        let index = str.firstIndex { character in
+//            character == "这"
+//        }
+//        str = str.substring(from: String.Index)
     }
     
     func testAction() -> Void {

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SRToast"
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "加载和提示模块"
   spec.swift_version      = "5.0"
 

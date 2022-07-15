@@ -76,14 +76,14 @@ public class SRTip: UIView {
     }
     
     @objc open func setTipContent(value:String) -> Void {
-        let appSize = UIScreen.main.bounds.size
+        let viewSize = self.frame.size
         if self.showLabel.superview == nil {
             self.addSubview(self.showLabel);
         }
-        let contentSize = SRToastTool.textSize(text: value, font: self.showLabel.font, maxSize: CGSize.init(width: appSize.width-self.tipStyle.edgeInsets.left-self.tipStyle.edgeInsets.right, height: 200), compensationSize: CGSize.init(width: 10, height: 15))
+        let contentSize = SRToastTool.textSize(text: value, font: self.showLabel.font, maxSize: CGSize.init(width: viewSize.width-self.tipStyle.edgeInsets.left-self.tipStyle.edgeInsets.right, height: 200), compensationSize: CGSize.init(width: 10, height: 15))
         self.showLabel.text = value;
         self.showLabel.frame = CGRect.init(x: 0, y: 0, width: contentSize.width, height: contentSize.height)
-        self.showLabel.center = CGPoint.init(x: appSize.width/2.0, y: appSize.height-(self.tipStyle.edgeInsets.bottom+contentSize.height))
+        self.showLabel.center = CGPoint.init(x: viewSize.width/2.0, y: viewSize.height-(self.tipStyle.edgeInsets.bottom+contentSize.height))
         if !self.showIng {
             self.showLabel.transform = self.tipStyle.showInitialTransform;
             self.showLabel.alpha = self.tipStyle.showInitialAlpha;

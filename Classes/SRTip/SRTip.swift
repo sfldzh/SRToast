@@ -31,6 +31,7 @@ public class SRTip: UIView {
         }
     }
     open var completeHandle:((_ tap:Bool)->Void)?
+    var showSec:Double = 2
     
     static func createView() -> SRTip?{
         let datas = sr_toast_bundle.loadNibNamed("SRTip", owner:nil, options:nil)!;
@@ -100,7 +101,7 @@ public class SRTip: UIView {
         self.afterWorkItem = DispatchWorkItem.init {[weak self] in
             self?.tipDismiss(isTap:false)
         }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2, execute: self.afterWorkItem!)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+self.showSec, execute: self.afterWorkItem!)
     }
     
     open func dismiss(){

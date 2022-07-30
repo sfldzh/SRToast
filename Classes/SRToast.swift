@@ -59,12 +59,23 @@ public extension UIView{
     }
     
     @discardableResult
-    @objc func showTip(value:String,style:SRTipStyleData? = nil,completeHandle:((_ tap:Bool)->Void)? = nil) -> SRTip {
-        let tip = SRTip.createView()!
-        tip.completeHandle = completeHandle
-        tip.frame = self.bounds
-        self.addSubview(tip)
-        tip.show(content: value, stype: style ?? SRToastManage.shared.tipStyleData)
-        return tip
+    @objc func showTip(value:String,style:SRTipStyleData? = nil,sec:Double = 2,completeHandle:((_ tap:Bool)->Void)? = nil) -> SRTip {
+        if let tip:SRTip = self.subviews.first(where: { subView in
+            return subView.isKind(of: SRTip.self)
+        }) as? SRTip {
+            tip.completeHandle = completeHandle
+            tip.showSec = sec
+            tip.frame = self.bounds
+            tip.show(content: value, stype: style ?? SRToastManage.shared.tipStyleData)
+            return tip
+        }else{
+            let tip = SRTip.createView()!
+            tip.completeHandle = completeHandle
+            tip.showSec = sec
+            tip.frame = self.bounds
+            self.addSubview(tip)
+            tip.show(content: value, stype: style ?? SRToastManage.shared.tipStyleData)
+            return tip
+        }
     }
 }

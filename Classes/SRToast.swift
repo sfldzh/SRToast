@@ -8,15 +8,28 @@
 import Foundation
 import UIKit
 
-#if COCOAPODS
-let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
-  .path(forResource: "SRToast", ofType: "bundle")
-  .map {
-    Bundle.init(path: $0)
-}!
-#else
-let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
-#endif
+//#if COCOAPODS
+//let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
+//  .path(forResource: "SRToast", ofType: "bundle")
+//  .map {
+//    Bundle.init(path: $0)
+//}!
+//#else
+//let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
+//#endif
+
+let sr_toast_bundle:Bundle = {
+    let containnerBundle = Bundle.init(for: SRDummy.self);
+    if let path = containnerBundle.path(forResource: "SRToast", ofType: "bundle"){
+        if let toastBundle = Bundle.init(path: path) {
+            return toastBundle
+        }else{
+            return Bundle.main
+        }
+    }else{
+        return Bundle.main
+    }
+}()
 
 fileprivate final class SRDummy {}
 

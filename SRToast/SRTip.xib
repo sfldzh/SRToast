@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,9 +13,73 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SRTip" customModule="SRToast" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14L-Cv-MUE">
+                    <rect key="frame" x="96.5" y="396" width="221" height="104"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="p64-Vb-bUB">
+                            <rect key="frame" x="15" y="15" width="191" height="74"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8z-rGn">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请认识已提交，请耐心等待对方同意。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5s-dv-boM">
+                                    <rect key="frame" x="0.0" y="33" width="191" height="41"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="#333333_90"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="p64-Vb-bUB" secondAttribute="bottom" constant="15" id="D5q-SL-mQ7"/>
+                        <constraint firstItem="p64-Vb-bUB" firstAttribute="top" secondItem="14L-Cv-MUE" secondAttribute="top" constant="15" id="HaC-x3-euU"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="223" id="bi8-Ws-QJC"/>
+                        <constraint firstItem="p64-Vb-bUB" firstAttribute="leading" secondItem="14L-Cv-MUE" secondAttribute="leading" constant="15" id="cnk-Sd-yvn"/>
+                        <constraint firstAttribute="trailing" secondItem="p64-Vb-bUB" secondAttribute="trailing" constant="15" id="ghU-tr-HzN"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="132" y="100"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="14L-Cv-MUE" secondAttribute="bottom" constant="40" id="GKb-ou-9O5"/>
+                <constraint firstItem="14L-Cv-MUE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Okr-bl-wS9"/>
+                <constraint firstItem="14L-Cv-MUE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s9D-aX-5cK"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="GKb-ou-9O5"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="bottom" destination="D5q-SL-mQ7" id="v54-6f-M48"/>
+                <outlet property="bottomLayout" destination="GKb-ou-9O5" id="ENt-kJ-FtR"/>
+                <outlet property="centerLayout" destination="Okr-bl-wS9" id="vpi-rh-rKd"/>
+                <outlet property="descLabel" destination="F5s-dv-boM" id="gQx-iG-ffI"/>
+                <outlet property="left" destination="cnk-Sd-yvn" id="9pV-vG-R8T"/>
+                <outlet property="right" destination="ghU-tr-HzN" id="M7Y-w7-Jxn"/>
+                <outlet property="showView" destination="14L-Cv-MUE" id="dp3-JC-AHi"/>
+                <outlet property="stackView" destination="p64-Vb-bUB" id="2Td-9w-bRx"/>
+                <outlet property="titleLabel" destination="9Fd-8z-rGn" id="VO5-en-iij"/>
+                <outlet property="top" destination="HaC-x3-euU" id="WUK-RB-7jx"/>
+            </connections>
+            <point key="canvasLocation" x="-919" y="94"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="#333333_90">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

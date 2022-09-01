@@ -41,8 +41,11 @@ fileprivate final class SRDummy {}
     }()
     
     @objc open var tipStyleData:SRTipStyleData = {
-        let hubData = SRTipStyleData.init()
-        return hubData
+        let tipData = SRTipStyleData.init()
+        tipData.backgroundColor = .black
+        tipData.tipColor = .white
+        tipData.tipFont = UIFont.systemFont(ofSize: 15, weight: .regular)
+        return tipData
     }()
     
     var keyboardHeight:CGFloat = 0

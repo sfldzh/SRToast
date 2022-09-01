@@ -93,6 +93,9 @@ public class SRTip: UIView {
         self.titleLabel.isHidden = title?.isEmpty ?? true
         self.titleLabel.text = title
         self.descLabel.text = value;
+        if self.tipStyle.showType == .bottom {
+            self.bottomLayout.constant = 40 + SRToastManage.shared.keyboardHeight
+        }
         if !self.showIng {
             self.showView.transform = CGAffineTransform.init(translationX: 0, y: -15)
             self.showView.alpha = 0.0

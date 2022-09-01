@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var input: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         SRToastManage.shared.tipStyleData.backgroundColor = UIColor.red
         SRToastManage.shared.tipStyleData.tipColor = UIColor.green
-        SRToastManage.shared.tipStyleData.showType = .center
+        SRToastManage.shared.tipStyleData.showType = .bottom
         SRToastManage.shared.hubStyleData.isTranslucent = true
         SRToastManage.shared.hubStyleData.isDark = false
         SRToastManage.shared.hubStyleData.backgroundColor = UIColor.clear
@@ -77,7 +78,18 @@ class ViewController: UIViewController {
 
     @IBAction func didClick(_ sender: UIButton) {
         print("点击了")
+        self.input.resignFirstResponder()
     }
     
+    
+    //MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField.text?.isEmpty ?? true {
+            self.view.showTip(value: "请输入派工单号")
+        }else{
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }
 

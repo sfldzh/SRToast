@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "SRToast"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "加载和提示模块"
   spec.swift_version      = "5.0"
   spec.homepage     = "https://www.baidu.com/"

@@ -25,16 +25,30 @@
                                     <action selector="didClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dnh-5F-Qgf"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-lJ-zef">
+                                <rect key="frame" x="167" y="245" width="80" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="VtV-WG-uEr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MiK-cc-iKf"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nPd-4b-fcF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Ls4-xa-pea"/>
+                            <constraint firstItem="3q4-lJ-zef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O7f-Tw-nMH"/>
+                            <constraint firstItem="3q4-lJ-zef" firstAttribute="top" secondItem="nPd-4b-fcF" secondAttribute="bottom" constant="70" id="Re3-9i-aC7"/>
                             <constraint firstItem="nPd-4b-fcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y9e-wG-IJg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btn" destination="nPd-4b-fcF" id="qYr-9F-4Sy"/>
+                        <outlet property="input" destination="3q4-lJ-zef" id="KTE-1i-GBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

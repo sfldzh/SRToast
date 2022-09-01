@@ -44,12 +44,44 @@ fileprivate final class SRDummy {}
         let hubData = SRTipStyleData.init()
         return hubData
     }()
+    
+    var keyboardHeight:CGFloat = 0
+    var durationValue:TimeInterval = 0
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     /// TODO:单利
     @objc public static let shared: SRToastManage = {
         let instance = SRToastManage()
+        instance.registerAllNotifications()
         return instance
     }()
     
+    /// 添加注册
+    private func registerAllNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    /// 键盘将要显示
+    /// - Parameter notification: 通知
+    @objc internal func keyboardWillShow(_ notification : Notification) {
+        if let info:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue, let duration:NSNumber = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber {
+            self.keyboardHeight = info.cgRectValue.size.height
+            self.durationValue = duration.doubleValue
+        }
+    }
+    
+    /// 键盘将要隐藏
+    /// - Parameter notification: 通知
+    @objc internal func keyboardWillHide(_ notification : Notification) {
+        if let duration:NSNumber = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber {
+            self.keyboardHeight = 0
+            self.durationValue = duration.doubleValue
+        }
+    }
     
 }
 

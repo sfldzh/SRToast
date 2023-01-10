@@ -2,7 +2,7 @@
 一个加载和提示模块
 
 # 安装方法
-    在Podfile中添加 pod 'SRToast','~> 0.1.2'
+    在Podfile中添加 pod 'SRToast','~> 0.1.3'
     然后使用 pod install 命令
     
 # 使用方法

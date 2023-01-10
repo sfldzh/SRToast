@@ -68,6 +68,10 @@ public class SRTip: UIView {
     }
     
     @objc private func tapDismiss(tap:UITapGestureRecognizer){
+        if self.afterWorkItem != nil {
+            self.afterWorkItem?.cancel()
+            self.afterWorkItem = nil
+        }
         self.tipDismiss(isTap: true)
     }
     

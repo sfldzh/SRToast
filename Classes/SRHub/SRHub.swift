@@ -35,11 +35,11 @@ open class SRHub: UIView {
     }()
     
     private var indicatorView: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView.init(style: .large)
+        var view:UIActivityIndicatorView!
         if #available(iOS 13.0, *) {
-            view.style = .large
+            view = UIActivityIndicatorView.init(style: .large)
         }else{
-            view.style = .whiteLarge
+            view = UIActivityIndicatorView.init(style: .whiteLarge)
         }
         view.color = .white
         view.hidesWhenStopped = true

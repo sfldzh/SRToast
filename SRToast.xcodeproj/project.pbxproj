@@ -8,16 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D60B988A2859CA510046B06A /* SRHubStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98802859CA510046B06A /* SRHubStyleData.swift */; };
-		D60B988B2859CA510046B06A /* SRHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B98812859CA510046B06A /* SRHub.xib */; };
 		D60B988C2859CA510046B06A /* SRHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98822859CA510046B06A /* SRHub.swift */; };
 		D60B988D2859CA510046B06A /* SRToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98832859CA510046B06A /* SRToast.swift */; };
 		D60B988E2859CA510046B06A /* SRTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98852859CA510046B06A /* SRTip.swift */; };
 		D60B988F2859CA510046B06A /* SRTipStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98862859CA510046B06A /* SRTipStyleData.swift */; };
-		D60B98902859CA510046B06A /* SRTip.xib in Resources */ = {isa = PBXBuildFile; fileRef = D60B98872859CA510046B06A /* SRTip.xib */; };
-		D60B98912859CA510046B06A /* SRToastTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98882859CA510046B06A /* SRToastTool.swift */; };
 		D60B98922859CA510046B06A /* SRStyleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B98892859CA510046B06A /* SRStyleData.swift */; };
 		D60B98B42859DB0B0046B06A /* SRToast.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D60B98B32859DB0B0046B06A /* SRToast.podspec */; };
-		D66D46E528976642009905C4 /* SRToast.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D66D46E428976642009905C4 /* SRToast.bundle */; };
 		D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8832859801300A98D9D /* AppDelegate.swift */; };
 		D69AE8862859801300A98D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8852859801300A98D9D /* SceneDelegate.swift */; };
 		D69AE8882859801300A98D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AE8872859801300A98D9D /* ViewController.swift */; };
@@ -28,16 +24,12 @@
 
 /* Begin PBXFileReference section */
 		D60B98802859CA510046B06A /* SRHubStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRHubStyleData.swift; sourceTree = "<group>"; };
-		D60B98812859CA510046B06A /* SRHub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRHub.xib; sourceTree = "<group>"; };
 		D60B98822859CA510046B06A /* SRHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRHub.swift; sourceTree = "<group>"; };
 		D60B98832859CA510046B06A /* SRToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRToast.swift; sourceTree = "<group>"; };
 		D60B98852859CA510046B06A /* SRTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTip.swift; sourceTree = "<group>"; };
 		D60B98862859CA510046B06A /* SRTipStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRTipStyleData.swift; sourceTree = "<group>"; };
-		D60B98872859CA510046B06A /* SRTip.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRTip.xib; sourceTree = "<group>"; };
-		D60B98882859CA510046B06A /* SRToastTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRToastTool.swift; sourceTree = "<group>"; };
 		D60B98892859CA510046B06A /* SRStyleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRStyleData.swift; sourceTree = "<group>"; };
 		D60B98B32859DB0B0046B06A /* SRToast.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRToast.podspec; sourceTree = "<group>"; };
-		D66D46E428976642009905C4 /* SRToast.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SRToast.bundle; sourceTree = "<group>"; };
 		D69AE8802859801300A98D9D /* SRToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69AE8832859801300A98D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69AE8852859801300A98D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				D60B98832859CA510046B06A /* SRToast.swift */,
-				D66D46E428976642009905C4 /* SRToast.bundle */,
-				D60B98882859CA510046B06A /* SRToastTool.swift */,
 				D60B98892859CA510046B06A /* SRStyleData.swift */,
 				D60B987F2859CA510046B06A /* SRHub */,
 				D60B98842859CA510046B06A /* SRTip */,
@@ -75,8 +65,8 @@
 		D60B987F2859CA510046B06A /* SRHub */ = {
 			isa = PBXGroup;
 			children = (
-				D60B98802859CA510046B06A /* SRHubStyleData.swift */,
 				D60B98822859CA510046B06A /* SRHub.swift */,
+				D60B98802859CA510046B06A /* SRHubStyleData.swift */,
 			);
 			path = SRHub;
 			sourceTree = "<group>";
@@ -111,8 +101,6 @@
 		D69AE8822859801300A98D9D /* SRToast */ = {
 			isa = PBXGroup;
 			children = (
-				D60B98872859CA510046B06A /* SRTip.xib */,
-				D60B98812859CA510046B06A /* SRHub.xib */,
 				D69AE8832859801300A98D9D /* AppDelegate.swift */,
 				D69AE8852859801300A98D9D /* SceneDelegate.swift */,
 				D69AE8872859801300A98D9D /* ViewController.swift */,
@@ -185,10 +173,7 @@
 				D69AE8902859801500A98D9D /* LaunchScreen.storyboard in Resources */,
 				D60B98B42859DB0B0046B06A /* SRToast.podspec in Resources */,
 				D69AE88D2859801500A98D9D /* Assets.xcassets in Resources */,
-				D60B988B2859CA510046B06A /* SRHub.xib in Resources */,
-				D66D46E528976642009905C4 /* SRToast.bundle in Resources */,
 				D69AE88B2859801300A98D9D /* Main.storyboard in Resources */,
-				D60B98902859CA510046B06A /* SRTip.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +189,6 @@
 				D60B988C2859CA510046B06A /* SRHub.swift in Sources */,
 				D69AE8842859801300A98D9D /* AppDelegate.swift in Sources */,
 				D60B988A2859CA510046B06A /* SRHubStyleData.swift in Sources */,
-				D60B98912859CA510046B06A /* SRToastTool.swift in Sources */,
 				D60B988F2859CA510046B06A /* SRTipStyleData.swift in Sources */,
 				D60B988D2859CA510046B06A /* SRToast.swift in Sources */,
 				D60B988E2859CA510046B06A /* SRTip.swift in Sources */,

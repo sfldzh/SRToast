@@ -8,31 +8,6 @@
 import Foundation
 import UIKit
 
-//#if COCOAPODS
-//let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
-//  .path(forResource: "SRToast", ofType: "bundle")
-//  .map {
-//    Bundle.init(path: $0)
-//}!
-//#else
-//let sr_toast_bundle:Bundle! = Bundle.init(for: SRDummy.self)
-//#endif
-
-let sr_toast_bundle:Bundle = {
-    let containnerBundle = Bundle.init(for: SRDummy.self);
-    if let path = containnerBundle.path(forResource: "SRToast", ofType: "bundle"){
-        if let toastBundle = Bundle.init(path: path) {
-            return toastBundle
-        }else{
-            return Bundle.main
-        }
-    }else{
-        return Bundle.main
-    }
-}()
-
-fileprivate final class SRDummy {}
-
 @objc open class SRToastManage:NSObject {
     @objc open var hubStyleData:SRHubStyleData = {
         let hubData = SRHubStyleData.init()
@@ -91,18 +66,20 @@ fileprivate final class SRDummy {}
 public extension UIView{
     
     @discardableResult
-    @objc func showHub(value:String? = nil, style:SRHubStyleData? = nil, filters:[CGRect]? = nil) -> SRHub {
-        let hub = SRHub.createView()!
+    @objc func showHub(value:String? = nil, isAnimate:Bool = true, style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
+        let hub = SRHub.createView()
         hub.style = style
-        hub.filters = filters ?? []
-        hub.frame = self.bounds
+        hub.filters = filters
         self.addSubview(hub)
-//        hub.translatesAutoresizingMaskIntoConstraints = false
-//        hub.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true  //顶部约束
-//        hub.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true  //左端约束
-//        hub.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true  //右端约束
-//        hub.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true  //底部约束
+        hub.translatesAutoresizingMaskIntoConstraints = false
+        hub.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true  //顶部约束
+        hub.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true  //左端约束
+        self.trailingAnchor.constraint(equalTo: hub.trailingAnchor, constant: 0).isActive = true  //右端约束
+        self.bottomAnchor.constraint(equalTo: hub.bottomAnchor, constant: 0).isActive = true  //底部约束
         hub.setHubContent(value: value ?? "")
+        if isAnimate {
+            hub.showAnimate()
+        }
         return hub
     }
     
@@ -113,15 +90,84 @@ public extension UIView{
         }) as? SRTip {
             tip.completeHandle = completeHandle
             tip.showSec = sec
-            tip.frame = self.bounds
+//            tip.frame = self.bounds
             tip.show(title:title, content: value, stype: style ?? SRToastManage.shared.tipStyleData)
             return tip
         }else{
-            let tip = SRTip.createView()!
+            let tip = SRTip.createView()
             tip.completeHandle = completeHandle
             tip.showSec = sec
-            tip.frame = self.bounds
+//            tip.frame = self.bounds
             self.addSubview(tip)
+            tip.translatesAutoresizingMaskIntoConstraints = false
+            tip.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true  //顶部约束
+            tip.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true  //左端约束
+            self.trailingAnchor.constraint(equalTo: tip.trailingAnchor, constant: 0).isActive = true  //右端约束
+            self.bottomAnchor.constraint(equalTo: tip.bottomAnchor, constant: 0).isActive = true  //底部约束
+            tip.show(title:title, content: value, stype: style ?? SRToastManage.shared.tipStyleData)
+            return tip
+        }
+    }
+}
+
+public class SRToast{
+    static func showHub(value:String? = nil, isAnimate:Bool = true, style:SRHubStyleData? = nil, filters:[CGRect] = []) -> SRHub {
+        var window:UIWindow!
+        if #available(iOS 15.0, *){
+            window = UIApplication.shared.connectedScenes
+                .filter { $0.activationState == .foregroundActive }// Keep only active scenes, onscreen and visible to the user
+                .first(where: { $0 is UIWindowScene })// Keep only the first `UIWindowScene`
+                .flatMap({ $0 as? UIWindowScene })?.windows// Get its associated windows
+                .first(where: \.isKeyWindow)// Finally, keep only the key window
+        }else{
+            window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first
+        }
+        let hub = SRHub.createView()
+        hub.style = style
+        hub.filters = filters
+        window.addSubview(hub)
+        hub.translatesAutoresizingMaskIntoConstraints = false
+        hub.topAnchor.constraint(equalTo: window.topAnchor, constant: 0).isActive = true  //顶部约束
+        hub.leadingAnchor.constraint(equalTo: window.leadingAnchor, constant: 0).isActive = true  //左端约束
+        window.trailingAnchor.constraint(equalTo: hub.trailingAnchor, constant: 0).isActive = true  //右端约束
+        window.bottomAnchor.constraint(equalTo: hub.bottomAnchor, constant: 0).isActive = true  //底部约束
+        hub.setHubContent(value: value ?? "")
+        if isAnimate {
+            hub.showAnimate()
+        }
+        return hub
+    }
+    
+    static func showTip(title:String? = nil,value:String,style:SRTipStyleData? = nil,sec:Double = 2,completeHandle:((_ tap:Bool)->Void)? = nil) -> SRTip {
+        var window:UIWindow!
+        if #available(iOS 15.0, *){
+            window = UIApplication.shared.connectedScenes
+                .filter { $0.activationState == .foregroundActive }// Keep only active scenes, onscreen and visible to the user
+                .first(where: { $0 is UIWindowScene })// Keep only the first `UIWindowScene`
+                .flatMap({ $0 as? UIWindowScene })?.windows// Get its associated windows
+                .first(where: \.isKeyWindow)// Finally, keep only the key window
+        }else{
+            window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first
+        }
+        if let tip:SRTip = window.subviews.first(where: { subView in
+            return subView.isKind(of: SRTip.self)
+        }) as? SRTip {
+            tip.completeHandle = completeHandle
+            tip.showSec = sec
+//            tip.frame = self.bounds
+            tip.show(title:title, content: value, stype: style ?? SRToastManage.shared.tipStyleData)
+            return tip
+        }else{
+            let tip = SRTip.createView()
+            tip.completeHandle = completeHandle
+            tip.showSec = sec
+//            tip.frame = self.bounds
+            window.addSubview(tip)
+            tip.translatesAutoresizingMaskIntoConstraints = false
+            tip.topAnchor.constraint(equalTo: window.topAnchor, constant: 0).isActive = true  //顶部约束
+            tip.leadingAnchor.constraint(equalTo: window.leadingAnchor, constant: 0).isActive = true  //左端约束
+            window.trailingAnchor.constraint(equalTo: tip.trailingAnchor, constant: 0).isActive = true  //右端约束
+            window.bottomAnchor.constraint(equalTo: tip.bottomAnchor, constant: 0).isActive = true  //底部约束
             tip.show(title:title, content: value, stype: style ?? SRToastManage.shared.tipStyleData)
             return tip
         }

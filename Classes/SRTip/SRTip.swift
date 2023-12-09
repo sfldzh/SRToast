@@ -8,22 +8,46 @@
 
 import UIKit
 
-
-
 public class SRTip: UIView {
-    @IBOutlet weak var centerLayout: NSLayoutConstraint!
-    @IBOutlet weak var bottomLayout: NSLayoutConstraint!
+    private var centerLayout: NSLayoutConstraint!
+    private var bottomLayout: NSLayoutConstraint!
     
-    @IBOutlet weak var top: NSLayoutConstraint!
-    @IBOutlet weak var left: NSLayoutConstraint!
-    @IBOutlet weak var bottom: NSLayoutConstraint!
-    @IBOutlet weak var right: NSLayoutConstraint!
+    private var top: NSLayoutConstraint!
+    private var left: NSLayoutConstraint!
+    private var bottom: NSLayoutConstraint!
+    private var right: NSLayoutConstraint!
     
-    @IBOutlet weak var stackView: UIStackView!
+    private var stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.distribution = .fill
+        stack.spacing = 15
+        return stack
+    }()
     
-    @IBOutlet weak var showView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descLabel: UILabel!
+    private var showView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 10.0
+        view.backgroundColor = UIColor.init(red: 0x33/0xff, green: 0x33/0xff, blue: 0x33/0xff, alpha: 0.9)
+        return view
+    }()
+    private var titleLabel: UILabel = {
+        let label = UILabel.init()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        return label
+    }()
+    private var descLabel: UILabel = {
+        let label = UILabel.init()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        return label
+    }()
     
     var showIng = false
     private var afterWorkItem:DispatchWorkItem?
@@ -47,16 +71,48 @@ public class SRTip: UIView {
     open var completeHandle:((_ tap:Bool)->Void)?
     var showSec:Double = 2
     
-    static func createView() -> SRTip?{
-        let datas = sr_toast_bundle.loadNibNamed("SRTip", owner:nil, options:nil)!
-        var view:SRTip?
-        for data in datas {
-            if let temp = data as? SRTip{
-                view = temp
-                break
-            }
+    static func createView() -> SRTip{
+        return SRTip.init();
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addViews()
+    }
+    
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    private func addViews(){
+        self.addSubview(self.showView)
+        self.showView.translatesAutoresizingMaskIntoConstraints = false
+        let centerXLayout:NSLayoutConstraint = self.showView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0)
+        let widthLayout:NSLayoutConstraint = self.showView.widthAnchor.constraint(lessThanOrEqualToConstant: 223)
+        self.centerLayout = self.showView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0)
+        self.bottomLayout = self.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: self.showView.bottomAnchor, constant: 40)
+        centerXLayout.isActive = true
+        widthLayout.isActive = true
+        self.centerLayout.isActive = true
+        self.bottomLayout.isActive = true
+        self.stackView.addArrangedSubview(self.titleLabel)
+        self.stackView.addArrangedSubview(self.descLabel)
+        self.showView.addSubview(self.stackView)
+        self.stackView.translatesAutoresizingMaskIntoConstraints = false
+        self.top = self.stackView.topAnchor.constraint(equalTo: self.showView.topAnchor, constant: 15)
+        self.left = self.stackView.leadingAnchor.constraint(equalTo: self.showView.leadingAnchor, constant: 15)
+        self.bottom = self.showView.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 15)
+        self.right = self.showView.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 15)
+        self.top.isActive = true
+        self.left.isActive = true
+        self.bottom.isActive = true
+        self.right.isActive = true
+    }
+    
+    public override var frame: CGRect{
+        didSet{
+            
         }
-        return view;
     }
     
     public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -123,5 +179,4 @@ public class SRTip: UIView {
     open func dismiss(){
         self.tipDismiss(isTap:false)
     }
-    
 }

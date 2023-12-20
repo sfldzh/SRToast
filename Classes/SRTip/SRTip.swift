@@ -107,6 +107,7 @@ public class SRTip: UIView {
         self.left.isActive = true
         self.bottom.isActive = true
         self.right.isActive = true
+        self.showView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(tapDismiss(tap:))))
     }
     
     public override var frame: CGRect{
@@ -146,7 +147,6 @@ public class SRTip: UIView {
     func show(title:String? = nil, content:String, stype:SRTipStyleData) -> Void {
         self.tipStyle = stype
         self.setTipContent(title: title, value: content)
-        self.showView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(tapDismiss(tap:))))
     }
     
     @objc open func setTipContent(title:String? = nil,value:String) -> Void {
